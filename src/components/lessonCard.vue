@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import info from `../src/timetable.json`;
+
 export default {
     props: {
         lessonCount: {

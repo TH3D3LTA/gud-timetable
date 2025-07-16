@@ -24,7 +24,7 @@ export default {
         return {
             toDate: new Date().getDate(),
             toMonth: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][new Date().getMonth()],
-            toWeekDay: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"][new Date().getDay()],
+            toWeekDay: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"][new Date().getDay()-1],
             isEvenWeek: ["Even", "Odd"][Math.floor(new Date() / 60480000) % 2],
         }
     }
