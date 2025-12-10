@@ -5,11 +5,10 @@
             <p class="inter text-white text-[16px] font-regular w-fit">{{isEvenWeek}} week</p>
         </div>
         <div class="flex p-1 flex-col h-fit bg-black w-full">
-            <lesson-card lesson-count="1" />
-            <lesson-card lesson-count="2" />
-            <lesson-card lesson-count="3" />
-            <lesson-card lesson-count="4" />
-            <lesson-card lesson-count="5" />
+            <lesson-card l-count="1" l-name="Math analyze" l-cabinet="1-100" l-teacher="Senner A.E." />
+            <lesson-card l-count="2" l-name="Math analyze" l-cabinet="1-100" l-teacher="Senner A.E." />
+            <lesson-card l-count="3" l-name="Math analyze" l-cabinet="1-100" l-teacher="Senner A.E." />
+            <lesson-card l-count="4" l-name="Math analyze" l-cabinet="1-100" l-teacher="Senner A.E." />
         </div>
     </section>
 </template>
@@ -24,7 +23,7 @@ export default {
         return {
             toDate: new Date().getDate(),
             toMonth: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][new Date().getMonth()],
-            toWeekDay: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"][new Date().getDay()-1],
+            toWeekDay: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][new Date().getDay()],
             isEvenWeek: ["Even", "Odd"][Math.floor(new Date() / 60480000) % 2],
         }
     }
